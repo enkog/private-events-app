@@ -1,14 +1,16 @@
-<h1>Showing selected event</h1>
+<h2 align= "center">Title: <%= @event.title%></h2>
 
-<p>
-  Title: <%= @event.title%>
-</p>
-<p>
-  Description: <%= @event.description%>
-</p>
-<p>
-  Location: <%= @event.location%>
-</p>
-<p>
-  Date: <%= @event.date%>
-</p>
+<div class= "a-ctr">
+  <div class= "well col-xs-8 col-offset-4">
+    <h4><strong>Description:</strong></h4>
+    <%= simple_format(@event.description) %>
+    <hr>
+
+    <h4><strong>Location:</strong></h4>
+    <%= simple_format(@event.location) %>
+    <hr>
+
+    <h4><strong>Date:</strong></h4>
+    <%= @event.date %> 
+  </div>
+</div>
