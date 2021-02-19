@@ -4,7 +4,7 @@
 #logo {
     float: left;
     font-size: 1.7em;
-    color: #fff;
+    color: #96C5B0;
     text-transform: uppercase;
     letter-spacing: -1px;
     font-weight: bold;
@@ -13,6 +13,11 @@
 #logo:hover {
     color: #777;
     text-decoration: none;
+}
+
+.custom-color {
+    background-color: #96C5B0;
+    color: #000;
 }
 
 .col-white {
@@ -35,8 +40,21 @@
     margin-bottom: 10px;
 }
 
+.mt {
+    margin-top: 15px;
+}
+
 .a-ctr {
     margin-left: 280px;
+}
+
+.jumbotron {
+    background: #2f323a;
+}
+
+.jumbotron h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #96C5B0;
 }
 
 .event-title {
