@@ -1,4 +1,4 @@
-<h1>Create an Event</h1>
+<h1 class= "center">Create an Event</h1>
 
 <% if @event.errors.any? %>
 <h2>The following errors prevented the event from being created</h2>
@@ -9,20 +9,39 @@
 </ul>
 <% end %>
 
-<%= form_with(model: @event, local: true) do |f| %>
-    <p><%= f.label :title %></p>
-    <p><%= f.text_field :title %></p>
+<div class="row">
+  <div class= "col-xs-12">
+    <%= form_with(model: @event, local: true) do |f| %>
+      <div class= "col-sm-2 col-form-label">
+        <%= f.label :title %>
+      </div>
+      <div class= "col-sm-9 mb">
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
 
-    <p><%= f.label :description %></p>
-    <p><%= f.text_area :description %></p>
+      <div class= "col-sm-2 col-form-label">
+        <%= f.label :description %>
+      </div>
+      <div class= "col-sm-9 mb">
+        <%= f.text_area :description, rows: 10, class: "form-control" %>
+      </div>
 
-    <p><%= f.label :location %></p>
-    <p><%= f.text_field :location %></p>
+      <div class= "col-sm-2 col-form-label">
+        <%= f.label :location %>
+      </div>
+      <div class= "col-sm-9 mb">
+        <%= f.text_field :location, class: "form-control" %>
+      </div>
 
-    <p><%= f.label :date %></p>
-    <p><%= f.date_field :date %></p>
-
-    <%= f.submit "Create Event" %>
-  
-
-<% end %>
+      <div class= "col-sm-2 col-form-label">
+        <%= f.label :date %>
+      </div>
+      <div class= "col-sm-9 mb">
+        <%= f.date_field :date, class: "form-control" %>
+      </div>
+      <div class= "col-sm-offset-2 col-sm-10">
+        <%= f.submit "Create", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

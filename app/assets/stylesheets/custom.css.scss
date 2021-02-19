@@ -4,15 +4,19 @@
 #logo {
     float: left;
     font-size: 1.7em;
-    color: #777;
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: -1px;
     font-weight: bold;
 }
 
 #logo:hover {
-    color: #000;
+    color: #777;
     text-decoration: none;
+}
+
+.col-white {
+  color: #fff;
 }
 
 .center {
@@ -26,3 +30,7 @@
     color: #777;
     text-align: center;
   }
+
+.mb {
+    margin-bottom: 10px;
+}
