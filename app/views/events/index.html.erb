@@ -10,6 +10,7 @@
         <div class="event-body mb">
           <%= event.description %>
         </div>
+        <small>Created by:<%= event.user.name %></small>
         <%= link_to 'Attend Event', root_path, class: "btn btn-primary" %>
       </div>
     </div>
