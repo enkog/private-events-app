@@ -17,15 +17,20 @@
 
 <!-- Links -->
     <ul class="nav navbar-nav">
+    <% if logged_in? %>
         <li><%= link_to 'Events', events_path, class: "col-white" %></li>
         <li><%= link_to 'Create Event', new_event_path, class: "col-white" %></li>
         <li class="dropdown">
             <a class="dropdown-toggle col-white" data-toggle="dropdown">Actions <span class="caret"></span></a>
             <ul class="dropdown-menu" role= "menu">
                 <li><%= link_to 'New Event', new_event_path, class: "nav-link" %></li>
-                <li><%= link_to 'New Event', new_event_path, class: "nav-link" %></li>
+                <li><%= link_to 'Logout', logout_path, method: :delete, class: "col-white" %></li>
             </ul>
         </li>
+    <% else %>
+        <li><%= link_to 'Login', login_path, class: "col-white" %></li>
+        <li><%= link_to 'Signup', new_user_path, class: "col-white" %></li>
+    <% end %>
     </ul>
 </div>
 

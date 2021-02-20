@@ -1,0 +1,17 @@
+<h1 class= "center text-primary">Login to P-EVENTS</h1>
+
+<div class="row">
+  <div class= "col-xs-12 center-form">
+    <%= form_with(scope: :session, url: login_path, local: true) do |f| %>
+      <div class= "col-sm-1 col-form-label text-primary">
+        <%= f.label :name %>
+      </div>
+      <div class= "col-sm-3 mb">
+        <%= f.text_field :name, class: "form-control mb" %>
+      </div>
+      <div class= "col-sm-offset-2 col-sm-10">
+        <%= f.submit "Login", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
