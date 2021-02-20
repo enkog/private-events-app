@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :require_user, except: [:index, :show]
   def index
     @events = Event.all
   end
@@ -9,7 +10,7 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    @event.user = User.first
+    @event.user = current_user
     if @event.save
         flash[:notice] = "Event created"
         redirect_to event_path(@event)
