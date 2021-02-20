@@ -1,13 +1,20 @@
 <h1 class= "center text-primary">Login to P-EVENTS</h1>
 
 <div class="row">
-  <div class= "col-xs-12 center-form">
+  <div class= "col-xs-12">
     <%= form_with(scope: :session, url: login_path, local: true) do |f| %>
-      <div class= "col-sm-1 col-form-label text-primary">
+      <div class= "col-sm-2 col-form-label text-primary">
         <%= f.label :name %>
       </div>
-      <div class= "col-sm-3 mb">
-        <%= f.text_field :name, class: "form-control mb" %>
+      <div class= "col-sm-9 mb">
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+
+      <div class= "col-sm-2 col-form-label text-primary">
+        <%= f.label :password %>
+      </div>
+      <div class= "col-sm-9 mb">
+        <%= f.password_field :password, class: "form-control" %>
       </div>
       <div class= "col-sm-offset-2 col-sm-10">
         <%= f.submit "Login", class: "btn btn-primary" %>
@@ -15,3 +22,4 @@
     <% end %>
   </div>
 </div>
+      

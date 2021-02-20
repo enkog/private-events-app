@@ -4,15 +4,17 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(name: params[:name])
-        if user
-          session[:user_id] = user.id
-          flash[:info] = "Hello #{user.name}"
-          redirect_to user_path(user)
-        else
-          flash[:danger] = "Something is wrong with your login information"
-          render :new
-        end
+    p "incoming parameters"
+    p params
+    user = User.find_by(name: params[:session][:name])
+    if user&.authenticate(params[:session][:password])
+        flash[:info] = "Hello #{user.name}"
+        session[:user_id] = user.id
+        redirect_to user_path(user)
+      else
+        flash[:danger] = "Wrong password or username"
+        render :new
+      end
     end
 
   def destroy
