@@ -24,5 +24,4 @@ class UserTest < ActiveSupport::TestCase
     @user.name = "aa"
     assert_not @user.valid?
   end
-
 end
