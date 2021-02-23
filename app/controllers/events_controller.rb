@@ -2,6 +2,8 @@ class EventsController < ApplicationController
   before_action :require_user, except: [:index, :show]
   def index
     @events = Event.all
+    @past = Event.past
+    @upcoming = Event.upcoming
   end
 
   def new
@@ -9,7 +11,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(event_params)
+    @event = current_user.events.build(event_params)
     @event.user = current_user
     if @event.save
         flash[:notice] = "Event created"
