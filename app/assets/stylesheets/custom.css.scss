@@ -2,17 +2,17 @@
 @import "bootstrap";
 
 #logo {
-    float: left;
-    font-size: 1.7em;
-    color: #96C5B0;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    font-weight: bold;
+  float: left;
+  font-size: 1.7em;
+  color: #96C5B0;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
 }
 
 #logo:hover {
-    color: #777;
-    text-decoration: none;
+  color: #777;
+  text-decoration: none;
 }
 
 .navbar-nav {
@@ -20,8 +20,8 @@
 }
 
 .custom-color {
-    background-color: #96C5B0;
-    color: #000;
+  background-color: #96C5B0;
+  color: #000;
 }
 
 .col-white {
@@ -29,54 +29,54 @@
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 .footer {
-    margin-top: 50px;
-    padding: 20px;
-    border-top: 1px solid #eaeaea;
-    color: #777;
-    text-align: center;
-  }
+  margin-top: 50px;
+  padding: 20px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+  text-align: center;
+}
 
 .mb {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .mt {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .a-ctr {
-    margin-left: 280px;
+  margin-left: 280px;
 }
 
 .custom-dark {
-    background: #2f323a;
+  background: #2f323a;
 }
 
 .jumbotron h1 {
-    font-family: 'Times New Roman', Times, serif;
-    color: #96C5B0;
+  font-family: 'Times New Roman', Times, serif;
+  color: #96C5B0;
 }
 
 .event-title {
-    font-size: 1.7em;
-    font-weight: bold;
-    list-style: none;
+  font-size: 1.7em;
+  font-weight: bold;
+  list-style: none;
 }
 
 .event-body {
-    border-top: 1px solid red;
-    padding: 15px 0px;
+  border-top: 1px solid red;
+  padding: 15px 0px;
 }
 
 .center-form {
-    margin: 50px 340px;
+  margin: 50px 340px;
 }
 
 .flex {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }

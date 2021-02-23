@@ -8,7 +8,7 @@
         <div class="event-body mb">
           <%= event.description %>
         </div>
-        <% if logged_in? %>
+        <% if current_user %>
           <%= link_to 'Attend Event', event_path(event), class: "btn btn-primary" %>
         <% end %>
       </div>
