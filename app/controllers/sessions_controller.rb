@@ -12,8 +12,8 @@ class SessionsController < ApplicationController
     else
       flash[:danger] = 'Wrong password or username'
       render :new
-      end
     end
+  end
 
   def destroy
     session[:user_id] = nil
