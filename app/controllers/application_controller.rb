@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
   end
 
   def require_user
-    flash[:danger] = 'You must be logged in to perform this action'
-    return flash[:danger] unless current_user
+    return flash[:danger] = 'You must be logged in to perform this action' unless current_user
   end
 end

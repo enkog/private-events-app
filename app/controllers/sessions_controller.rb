@@ -2,8 +2,6 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    p 'incoming parameters'
-    p params
     user = User.find_by(name: params[:session][:name])
     if user&.authenticate(params[:session][:password])
       flash[:info] = "Hello #{user.name}"
