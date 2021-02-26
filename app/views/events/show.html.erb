@@ -12,5 +12,25 @@
 
     <h4><strong>Date:</strong></h4>
     <%= @event.date %> 
+    <hr>
+
+    <p><small>Created by: <%= @event.creator.name %></small> </p>
+    
+    <hr>
+    <% if current_user %>
+      <h4><strong>Attendees:</strong></h4>
+      <ul>
+        <% @event.attendees.each do |attendee| %>
+            <li><%= link_to attendee.name, attendee %></li>
+        <% end %>
+      </ul>
+      <% if !@event.attendees.to_a.any?(current_user) %>
+          <%= render 'attend_form' %>
+      <% else %>
+          <p>You are already attending this event</p>
+      <% end %>
+    <% else %>
+      <p>You must log in or sign up to view the attendees</p>
+    <% end %>
   </div>
 </div>
