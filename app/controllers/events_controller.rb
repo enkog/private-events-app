@@ -27,7 +27,6 @@ class EventsController < ApplicationController
 
   def attend
     attend = EventUser.create(user_id: params[:attend][:user_id], event_id: params[:attend][:event_id])
-
     return redirect_to current_user if attend
   end
 
