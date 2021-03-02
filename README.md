@@ -16,6 +16,7 @@ In this project, I built a site similar to a private Eventbrite which allows use
 - <code>cd private-events-app</code>
 - <code>$ bundle install</code>
 - <code>$ yarn install</code>
+- <code>$ rails db:create</code>
 - <code>$ rails db:migrate</code>
 - <code>$ rails server</code>
 
