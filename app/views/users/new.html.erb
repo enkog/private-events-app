@@ -1,0 +1,33 @@
+<h1 class= "center text-primary">Signup for P-EVENTS</h1>
+
+<% if @user.errors.any? %>
+<h2>The following errors prevented the event from being created</h2>
+<ul>
+  <% @user.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end%>
+</ul>
+<% end %>
+
+<div class="row">
+  <div class= "col-xs-12">
+    <%= form_with(model: @user, local: true) do |f| %>
+      <div class= "col-sm-2 col-form-label text-primary">
+        <%= f.label :name %>
+      </div>
+      <div class= "col-sm-9 mb">
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+
+      <div class= "col-sm-2 col-form-label text-primary">
+        <%= f.label :password %>
+      </div>
+      <div class= "col-sm-9 mb">
+        <%= f.password_field :password, class: "form-control" %>
+      </div>
+      <div class= "col-sm-offset-2 col-sm-10">
+        <%= f.submit "Signup", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

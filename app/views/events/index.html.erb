@@ -1,0 +1,39 @@
+
+<h1 align="center" class="text-primary">Past Events</h1>
+
+<% @past.each do |event| %>
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="well well-lg">
+        <div class="event-title">
+          <%= link_to event.title, event_path(event) %>
+        </div>
+        <div class="event-body mb">
+          <%= event.description %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<h1 align="center" class="text-primary">Upcoming Events</h1>
+<% @upcoming.each do |event| %>
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="well well-lg">
+        <div class="event-title">
+          <%= link_to event.title, event_path(event) %>
+        </div>
+        <div class="event-body mb">
+          <%= event.description %>
+        </div>
+        <div>
+          <small>Created by: <%= event.creator.name %></small> 
+        </div>
+        <% if current_user %>
+          <%= link_to 'Attend Event', event_path(event), class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
