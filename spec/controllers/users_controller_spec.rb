@@ -50,6 +50,6 @@ RSpec.describe 'create user and redirect to user show page', type: :feature do
     fill_in 'Password', with: 'helloworld'
     click_button 'Signup'
     visit users_path
-    expect(page).to have_content("Nkiruka")
+    expect(page).to have_content('Nkiruka')
   end
 end
